@@ -1,0 +1,25 @@
+<%- include("partials/landingnav.ejs") %>
+
+<div class="container h-100">
+  <div class="row h-100">
+      <div class="col d-flex flex-column justify-content-md-center align-items-md-center">
+          <div class="d-flex flex-column align-items-center login-card">
+            <img class="img-fluid"  src="/assets/img/Fusion-Mosaic.png" width="200px">
+            <form class="form-signin" style="width: 80%;" >
+              <input class="form-control" type="text" id="inputUsername" placeholder="Username" autofocus required>
+              <input class="form-control" type="password" id="inputPassword" placeholder="Password" required>
+                <div class="checkbox" style="margin-bottom: 10px;">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="formCheck-1"><label class="form-check-label" for="formCheck-1" style="color: rgb(255,255,255);">Remember me</label>
+                    </div>
+                </div>
+                <!-- <button class="btn btn-primary btn-block btn-lg btn-signin">Sign in</button> -->
+                <a href="sounds" class="btn btn-outline-light" style="width: 100%; margin-bottom: 20px;">Sign In</a>
+            </form>
+
+            <a class="forgot-password" href="#" style="color: rgb(255,255,255);">Forgot your password?</a></div>
+      </div>
+  </div>
+</div>
+
+<%- include("partials/landingfooter.ejs") %>

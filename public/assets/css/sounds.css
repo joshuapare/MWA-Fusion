@@ -1,0 +1,140 @@
+
+/* HEADERS */
+.pack-col {
+  max-width: 70px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.checked-col {
+  max-width: 30px;
+}
+
+.type-col {
+  max-width: 50px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+.waveform-col {
+  max-width: 400px;
+}
+
+.instrument-col {
+  max-width: 15%;
+}
+
+.bpm-col {
+  max-width: 60px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.key-col {
+  max-width: 60px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.actions-col {
+  max-width: 200px;
+  min-width: 200px;
+  width: 200px;
+}
+
+/* SOUNDS */
+.sound-item {
+  background: rgba(255,255,255,0);
+  transition: 50ms;
+}
+
+.sound-item:hover {
+  border: 1px solid white;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(255,255,255,1);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(255,255,255,1);
+  box-shadow: 0px 0px 5px 0px rgba(255,255,255,1);
+}
+
+.checked-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+}
+
+.pack-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 70px;
+  padding-right: 5px;
+  padding-left: 5px;
+  min-width: 70px;
+  width: 70px;
+
+}
+
+.type-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 50px;
+  min-width: 50px;
+  width: 50px;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.waveform-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+}
+
+.name-container {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  text-overflow: ellipsis;
+}
+
+.instrument-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  max-width: 15%;
+}
+
+.bpm-container, .key-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 60px;
+}
+
+
+.actions-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 200px;
+  min-width: 200px;
+  width: 200px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.actions-container .fa, .actions-container .fa-heart {
+  transition: 100ms;
+}
+
+.actions-container .fa:hover, .actions-container .fa-heart:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.actions-container .fa:active, .actions-container .fa-heart:active  {
+  transform: scale(0.9);
+}

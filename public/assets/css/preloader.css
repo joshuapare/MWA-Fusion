@@ -1,0 +1,10 @@
+.loader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url('/assets/img/preloader-white.svg') 50% 50% no-repeat #302d4d;
+  opacity: 1;
+}

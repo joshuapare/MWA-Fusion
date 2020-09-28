@@ -1,13 +1,15 @@
 {
-    "name": "hello-world",
-    "description": "Sample NodeJs web application",
-    "version": "0.0.1",
-    "private": true,
-    "devDependencies": {
-        "mocha": "5.0.0",
-        "unit.js": "2.0.0"
-    },
-    "scripts": {
-        "test": "mocha --recursive tests"
-    }
+  "name": "fwa_music",
+  "version": "1.0.0",
+  "description": "Web application designed to allow Fusion Academy students, staff and faculty to haev free access to creative resources. This prjoect is structured around a Node.js, Express, EJS, and MySQL stack, using AWS for a large variety of resources.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joshua Pare",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1"
+  }
 }

@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Dashboard - Brand</title>
+    <link rel="stylesheet" href="/assets/css/appbootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="/assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="/assets/css/sounds.css">
+    <link rel="stylesheet" href="/assets/css/preloader.css">
+
+    <script src="/assets/js/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        $(window).on("load", function() {
+            $(".loader").delay(500).fadeOut(50);
+        });
+    </script>
+</head>
+
+<body id="page-top">
+    <div class="loader"></div>
+
+    <div id="wrapper">
+
+        <!-- SIDENAV -->
+        <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0" style="background: #342856;">
+            <div class="container-fluid d-flex flex-column p-0">
+                <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#" style="padding-top: 30px;background: rgba(255,255,255,0);">
+                    <div class="sidebar-brand-text mx-3"><img class="img-fluid" src="/assets/img/FusionLogoFullReverse.png"></div>
+                </a>
+                <hr class="sidebar-divider my-0">
+                <ul class="nav navbar-nav text-light" id="accordionSidebar">
+                    <li class="nav-item"><a class="nav-link active" href="sounds"><i class="fas fa-tachometer-alt"></i>Sounds<span></span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="profile.html"><i class="fas fa-user"></i><span>Profile</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="table.html"><i class="fas fa-table"></i><span>Collections</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html"><i class="far fa-user-circle"></i><span>Community</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="register.html"><i class="fas fa-user-circle"></i><span>Contribute</span></a></li>
+                </ul>
+                <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
+            </div>
+        </nav>
+
+
+
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content" style="background: #201630;">
+
+                <nav class="navbar navbar-light navbar-expand shadow mb-4 topbar static-top" style="background: #3f3565;">
+                    <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle mr-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button>
+                        <form class="form-inline d-none d-sm-inline-block mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                            <div class="input-group"><input class="form-control border-0 small" type="text" placeholder="Search Library" style="background: #2b284f;">
+                                <div class="input-group-append"><button class="btn btn-primary py-0" type="button" style="background: rgb(79,55,146);"><i class="fas fa-search"></i></button></div>
+                            </div>
+                        </form>
+                        <ul class="nav navbar-nav flex-nowrap ml-auto">
+                            <li class="nav-item dropdown d-sm-none no-arrow"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#"><i class="fas fa-search"></i></a>
+                                <div class="dropdown-menu dropdown-menu-right p-3 animated--grow-in" aria-labelledby="searchDropdown">
+                                    <form class="form-inline mr-auto navbar-search w-100">
+                                        <div class="input-group"><input class="bg-light form-control border-0 small" type="text" placeholder="Search for ...">
+                                            <div class="input-group-append"><button class="btn btn-primary py-0" type="button"><i class="fas fa-search"></i></button></div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown no-arrow mx-1">
+                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#"><i class="far fa-list-alt fa-fw" style="color: rgb(255,255,255);"></i></a>
+                                    <div class="dropdown-menu dropdown-menu-right dropdown-list dropdown-menu-right animated--grow-in">
+                                        <h6 class="dropdown-header">Quick Collections</h6>
+                                        <a class="d-flex flex-row align-items-center align-content-center justify-content-xl-start dropdown-item" href="#">
+                                            <div class="mr-3">
+                                                <div class="bg-primary icon-circle fa-lg"><i class="fas fa-music text-white"></i></div>
+                                            </div>
+                                            <div class="d-flex flex-column align-items-xl-start">
+                                                <h6 class="d-flex align-self-baseline" style="margin-bottom: 0px;padding-top: 5px;">Example Collection</h6><small>Genre</small></div>
+                                        </a><a class="text-center dropdown-item small text-gray-500" href="#">Show All Collections</a></div>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown no-arrow mx-1">
+                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#"><i class="far fa-heart fa-fw" style="color: rgb(255,255,255);"></i></a>
+                                    <div class="dropdown-menu dropdown-menu-right dropdown-list dropdown-menu-right animated--grow-in">
+                                        <h6 class="dropdown-header">Quick Favorites</h6>
+                                        <a class="d-flex justify-content-around align-items-center dropdown-item" href="#" style="padding-left: 10px;padding-right: 0px;">
+                                            <div class="d-flex justify-content-xl-center align-items-xl-center dropdown-list-image mr-3" style="margin-right: 0px;"><i class="fas fa-play fa-lg"></i></div>
+                                            <div class="text-truncate"><span>Favorite Sample Name</span></div>
+                                            <div class="d-flex float-right ml-auto justify-content-xl-center align-items-xl-center dropdown-list-image mr-3"><i class="fas fa-arrow-circle-down fa-lg"></i></div>
+                                        </a><a class="text-center dropdown-item small text-gray-500" href="#">See More</a></div>
+                                </div>
+                                <div class="shadow dropdown-list dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown"></div>
+                            </li>
+                            <div class="d-none d-sm-block topbar-divider"></div>
+                            <li class="nav-item dropdown no-arrow">
+                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle text-white nav-link" data-toggle="dropdown" aria-expanded="false" href="#"><span style="margin-right: 10px;">Current User</span><img class="border rounded-circle img-profile" src="assets/img/avatars/avatar1.jpeg"></a>
+                                    <div
+                                        class="dropdown-menu shadow dropdown-menu-right animated--grow-in"><a class="dropdown-item" href="#"><i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Profile</a><a class="dropdown-item" href="#"><i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Settings</a>
+                                        <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Logout</a></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+
+        <!-- SOUNDS APP CONTAINER -->
+        <div class="container-fluid">
+            
+
+            <!-- SAMPLER -->
+            <div class="row" >
+                <div class="col-auto col-lg-12 col-xl-12" style="max-width: auto;">
+                    <div class="card shadow mb-4" style="background: rgba(255,255,255,0);border-width: 0px;color: rgba(61,52,78,0);">
+
+                        <!-- FILTER AREA -->
+                        <div class="card-header" style="background: rgba(248,249,252,0);border-bottom-color: rgba(255,255,255,0.24);">
+                            <div class="row d-flex flex-nowrap">
+                                <div class="col d-inline-flex flex-nowrap">
+                                    <h6 class="text-white d-flex align-items-center font-weight-bold m-0" style="min-width: 80px;">FILTER BY</h6>
+
+                                    <div class="dropdown">
+                                      <button class="btn dropdown-toggle text-white" data-toggle="dropdown" aria-expanded="false" type="button" style="margin-left: 40px;padding: 6px 20px;">Type&nbsp;</button>
+                                        <div class="dropdown-menu" style="background: #302d4d;">
+                                          <a class="dropdown-item text-white" href="#">Sample</a>
+                                          <a class="dropdown-item text-white" href="#">Loop</a>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="dropdown">
+                                      <button class="btn dropdown-toggle text-white" data-toggle="dropdown" aria-expanded="false" type="button" style="padding: 6px 20px;">Instrument&nbsp;</button>
+                                        <div class="dropdown-menu" style="background: #302d4d;">
+                                          <a class="dropdown-item text-white" href="#">Drums</a>
+                                          <a class="dropdown-item text-white" href="#">Keys</a>
+                                          <a class="dropdown-item text-white" href="#">Bass</a>
+                                          <a class="dropdown-item text-white" href="#">Synth</a>
+                                          <a class="dropdown-item text-white" href="#">Guitar</a>
+                                          <a class="dropdown-item text-white" href="#">Strings</a>
+                                          <a class="dropdown-item text-white" href="#">FX</a>
+                                          <a class="dropdown-item text-white" href="#">Synth</a>
+                                          <a class="dropdown-item text-white" href="#">Bass</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="dropdown">
+                                      <button class="btn dropdown-toggle text-white" data-toggle="dropdown" aria-expanded="true" type="button" style="padding: 6px 20px;">BPM </button>
+                                      <div class="dropdown-menu" style="background: #302d4d; width: 200px;">
+                                          <form style="padding: 10px">
+                                            <input type="number" class="form-control form-control-sm" step="1" name="bpmentry" style="background: rgba(255, 255, 255, 0.1);border: .5px solid white;color: rgb(255,255,255);"
+                                              />
+                                            <input type="range" class="custom-range" min="40" max="200" step="1" name="bpmslider" style="margin-top: 10px;"/>
+                                            <button type="submit" class="btn btn-outline-light" style="width: 100%; margin-top: 10px;">Filter</button>
+                                          </form>
+                                      </div>
+                                    </div>
+
+                                    <div class="dropdown"><button class="btn dropdown-toggle text-white" data-toggle="dropdown" aria-expanded="false" type="button">Key&nbsp;</button>
+                                      <div class="dropdown-menu" style="background: #302d4d; width: 200px;">
+                                        <form style="padding: 10px">
+                                            <div class="form-row">
+                                                <div class="form-group col-5">
+                                                <select class="form-control btn btn-outline-light" id="keyroot">
+                                                    <option>C</option>
+                                                    <option>Db</option>
+                                                    <option>D</option>
+                                                    <option>Eb</option>
+                                                    <option>E</option>
+                                                    <option>F</option>
+                                                    <option>Gb</option>
+                                                    <option>G</option>
+                                                    <option>Ab</option>
+                                                    <option>A</option>
+                                                    <option>Bb</option>
+                                                    <option>B</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="form-group col-7">
+                                                <select class="form-control btn btn-outline-light" id="keyquality">
+                                                    <option>Major</option>
+                                                    <option>Minor</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                            
+
+
+                                          <button type="submit" class="btn btn-outline-light" style="width: 100%; margin-top: 10px;">Filter</button>
+
+                                        </form>
+                                    </div>                                    
+                                  </div>
+
+                                </div>
+                                <div class="col d-inline-flex justify-content-end flex-wrap">
+                                    <div class="dropdown"><button class="btn dropdown-toggle text-white" data-toggle="dropdown" aria-expanded="false" type="button">SORT BY&nbsp;</button>
+                                        <div class="dropdown-menu" style="background: #302d4d;">
+                                            <a class="dropdown-item text-white" href="#">Popularity</a>
+                                            <a class="dropdown-item text-white" href="#">Name</a>
+                                            <a class="dropdown-item text-white" href="#">Pack</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CONTENT AREA -->
+                        <div class="card-body" style="color: #ffffff;">
+                            <ul class="list-group" style="min-width: 1000px;">
+
+                                <!-- COLUMN LABELS -->
+                                <li class="list-group-item list-group-item-light" style="background: rgba(255,255,255,0);">
+                                    <div class="row">
+                                        <div class="col checked-col">
+                                            <h6 class="text-center"></h6>
+                                        </div>
+                                        <div class="col pack-col">
+                                            <h6 class="text-center">Pack</h6>
+                                        </div>
+                                        <div class="col type-col">
+                                            <h6 class="text-center">Type</h6>
+                                        </div>
+                                        <div class="col waveform-col">
+                                            <h6 class="text-left">Waveform</h6>
+                                        </div>
+                                        <div class="col name-col">
+                                            <h6 class="text-left">Name</h6>
+                                        </div>
+                                        <div class="col instrument-col">
+                                            <h6 class="text-left">Instrument</h6>
+                                        </div>
+                                        <div class="col bpm-col">
+                                            <h6 class="text-center">BPM</h6>
+                                        </div>
+                                        <div class="col key-col">
+                                            <h6 class="text-center">Key</h6>
+                                        </div>
+                                        <div class="col actions-col">
+                                            <h6 class="text-center"></h6>
+                                        </div>
+                                    </div>
+                                </li>
+
+
+                                <!-- SOUNDS LOADING AREA -->
+                                <div id="loadingarea">
+
+                                    <li class="list-group-item sound-item">
+                                        <div class="row">
+                                            <div class="form-check checked-container">
+                                                <input class="form-check-input" type="checkbox" value="" id="w1">
+                                              </div>
+                                            <div class="col pack-container">
+                                                <img class="img-fluid" src="/assets/img/avatar5.jpeg" width="50px" height="50px">
+                                            </div>
+                                            <div class="col type-container">
+                                                <i class="fa fa-circle-o-notch fa-2x"></i>
+                                            </div>
+                                            <div class="col waveform-container">
+                                                <div id="wave1" style="height: 50px; width: 100%;"></div>
+                                            </div>
+                                            <div class="col text-truncate name-container" id="wavename1">
+                                                <span>Samplename Continued Name</span>
+                                                <sub class="text-white-50">Pack Name</sub>
+                                            </div>
+                                            <div class="col instrument-container"><span>Piano</span></div>
+                                            <div class="col bpm-container"><span>120</span></div>
+                                            <div class="col key-container"><span>C</span></div>
+                                            <div class="col actions-container">
+                                                <i class="far fa-heart fa-lg"></i>
+                                                <i class="fa fa-plus fa-lg"></i>
+                                                <i class="fa fa-download fa-lg"></i>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="list-group-item sound-item">
+                                        <div class="row">
+                                            <div class="form-check checked-container">
+                                                <input class="form-check-input" type="checkbox" value="" id="w2">
+                                              </div>
+                                            <div class="col pack-container">
+                                                <img class="img-fluid" src="/assets/img/avatar5.jpeg" width="50px" height="50px">
+                                            </div>
+                                            <div class="col type-container">
+                                                <i class="fa fa-circle-o-notch fa-2x"></i>
+                                            </div>
+                                            <div class="col waveform-container">
+                                                <div id="wave2" style="height: 50px; width: 100%;"></div>
+                                            </div>
+                                            <div class="col text-truncate name-container" id="wavename1">
+                                                <span>Samplename Continued Name</span>
+                                                <sub class="text-white-50">Pack Name</sub>
+                                            </div>
+                                            <div class="col instrument-container"><span>Piano</span></div>
+                                            <div class="col bpm-container"><span>120</span></div>
+                                            <div class="col key-container"><span>C</span></div>
+                                            <div class="col actions-container">
+                                                <i class="far fa-heart fa-lg"></i>
+                                                <i class="fa fa-plus fa-lg"></i>
+                                                <i class="fa fa-download fa-lg"></i>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="list-group-item sound-item">
+                                        <div class="row">
+                                            <div class="form-check checked-container">
+                                                <input class="form-check-input" type="checkbox" value="" id="w1">
+                                              </div>
+                                            <div class="col pack-container">
+                                                <img class="img-fluid" src="/assets/img/avatar5.jpeg" width="50px" height="50px">
+                                            </div>
+                                            <div class="col type-container">
+                                                <i class="fa fa-circle-o-notch fa-2x"></i>
+                                            </div>
+                                            <div class="col waveform-container">
+                                                <div id="wave3" style="height: 50px; width: 100%;"></div>
+                                            </div>
+                                            <div class="col text-truncate name-container" id="wavename1">
+                                                <span>Samplename Continued Name</span>
+                                                <sub class="text-white-50">Pack Name</sub>
+                                            </div>
+                                            <div class="col instrument-container"><span>Piano</span></div>
+                                            <div class="col bpm-container"><span>120</span></div>
+                                            <div class="col key-container"><span>C</span></div>
+                                            <div class="col actions-container">
+                                                <i class="far fa-heart fa-lg"></i>
+                                                <i class="fa fa-plus fa-lg"></i>
+                                                <i class="fa fa-download fa-lg"></i>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="list-group-item sound-item">
+                                        <div class="row">
+                                            <div class="form-check checked-container">
+                                                <input class="form-check-input" type="checkbox" value="" id="w1">
+                                              </div>
+                                            <div class="col pack-container">
+                                                <img class="img-fluid" src="/assets/img/avatar5.jpeg" width="50px" height="50px">
+                                            </div>
+                                            <div class="col type-container">
+                                                <i class="fa fa-circle-o-notch fa-2x"></i>
+                                            </div>
+                                            <div class="col waveform-container">
+                                                <div id="wave4" style="height: 50px; width: 100%;"></div>
+                                            </div>
+                                            <div class="col text-truncate name-container" id="wavename1">
+                                                <span>Samplename Continued Name</span>
+                                                <sub class="text-white-50">Pack Name</sub>
+                                            </div>
+                                            <div class="col instrument-container"><span>Piano</span></div>
+                                            <div class="col bpm-container"><span>120</span></div>
+                                            <div class="col key-container"><span>C</span></div>
+                                            <div class="col actions-container">
+                                                <i class="far fa-heart fa-lg"></i>
+                                                <i class="fa fa-plus fa-lg"></i>
+                                                <i class="fa fa-download fa-lg"></i>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="list-group-item sound-item">
+                                        <div class="row">
+                                            <div class="form-check checked-container">
+                                                <input class="form-check-input" type="checkbox" value="" id="w1">
+                                              </div>
+                                            <div class="col pack-container">
+                                                <img class="img-fluid" src="/assets/img/avatar5.jpeg" width="50px" height="50px">
+                                            </div>
+                                            <div class="col type-container">
+                                                <i class="fa fa-circle-o-notch fa-2x"></i>
+                                            </div>
+                                            <div class="col waveform-container">
+                                                <div id="wave5" style="height: 50px; width: 100%;"></div>
+                                            </div>
+                                            <div class="col text-truncate name-container" id="wavename1">
+                                                <span>Samplename Continued Name</span>
+                                                <sub class="text-white-50">Pack Name</sub>
+                                            </div>
+                                            <div class="col instrument-container"><span>Piano</span></div>
+                                            <div class="col bpm-container"><span>120</span></div>
+                                            <div class="col key-container"><span>C</span></div>
+                                            <div class="col actions-container">
+                                                <i class="far fa-heart fa-lg"></i>
+                                                <i class="fa fa-plus fa-lg"></i>
+                                                <i class="fa fa-download fa-lg"></i>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="list-group-item sound-item">
+                                        <div class="row">
+                                            <div class="form-check checked-container">
+                                                <input class="form-check-input" type="checkbox" value="" id="w1">
+                                              </div>
+                                            <div class="col pack-container">
+                                                <img class="img-fluid" src="/assets/img/avatar5.jpeg" width="50px" height="50px">
+                                            </div>
+                                            <div class="col type-container">
+                                                <i class="fa fa-circle-o-notch fa-2x"></i>
+                                            </div>
+                                            <div class="col waveform-container">
+                                                <div id="wave6" style="height: 50px; width: 100%;"></div>
+                                            </div>
+                                            <div class="col text-truncate name-container" id="wavename1">
+                                                <span>Samplename Continued Name</span>
+                                                <sub class="text-white-50">Pack Name</sub>
+                                            </div>
+                                            <div class="col instrument-container"><span>Piano</span></div>
+                                            <div class="col bpm-container"><span>120</span></div>
+                                            <div class="col key-container"><span>C</span></div>
+                                            <div class="col actions-container">
+                                                <i class="far fa-heart fa-lg"></i>
+                                                <i class="fa fa-plus fa-lg"></i>
+                                                <i class="fa fa-download fa-lg"></i>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="list-group-item sound-item">
+                                        <div class="row">
+                                            <div class="form-check checked-container">
+                                                <input class="form-check-input" type="checkbox" value="" id="w1">
+                                              </div>
+                                            <div class="col pack-container">
+                                                <img class="img-fluid" src="/assets/img/avatar5.jpeg" width="50px" height="50px">
+                                            </div>
+                                            <div class="col type-container">
+                                                <i class="fa fa-circle-o-notch fa-2x"></i>
+                                            </div>
+                                            <div class="col waveform-container">
+                                                <div id="wave7" style="height: 50px; width: 100%;"></div>
+                                            </div>
+                                            <div class="col text-truncate name-container" id="wavename1">
+                                                <span>Samplename Continued Name</span>
+                                                <sub class="text-white-50">Pack Name</sub>
+                                            </div>
+                                            <div class="col instrument-container"><span>Piano</span></div>
+                                            <div class="col bpm-container"><span>120</span></div>
+                                            <div class="col key-container"><span>C</span></div>
+                                            <div class="col actions-container">
+                                                <i class="far fa-heart fa-lg"></i>
+                                                <i class="fa fa-plus fa-lg"></i>
+                                                <i class="fa fa-download fa-lg"></i>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="list-group-item sound-item">
+                                        <div class="row">
+                                            <div class="form-check checked-container">
+                                                <input class="form-check-input" type="checkbox" value="" id="w1">
+                                              </div>
+                                            <div class="col pack-container">
+                                                <img class="img-fluid" src="/assets/img/avatar5.jpeg" width="50px" height="50px">
+                                            </div>
+                                            <div class="col type-container">
+                                                <i class="fa fa-circle-o-notch fa-2x"></i>
+                                            </div>
+                                            <div class="col waveform-container">
+                                                <div id="wave8" style="height: 50px; width: 100%;"></div>
+                                            </div>
+                                            <div class="col text-truncate name-container" id="wavename1">
+                                                <span>Samplename Continued Name</span>
+                                                <sub class="text-white-50">Pack Name</sub>
+                                            </div>
+                                            <div class="col instrument-container"><span>Piano</span></div>
+                                            <div class="col bpm-container"><span>120</span></div>
+                                            <div class="col key-container"><span>C</span></div>
+                                            <div class="col actions-container">
+                                                <i class="far fa-heart fa-lg"></i>
+                                                <i class="fa fa-plus fa-lg"></i>
+                                                <i class="fa fa-download fa-lg"></i>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="list-group-item sound-item">
+                                        <div class="row">
+                                            <div class="form-check checked-container">
+                                                <input class="form-check-input" type="checkbox" value="" id="w1">
+                                              </div>
+                                            <div class="col pack-container">
+                                                <img class="img-fluid" src="/assets/img/avatar5.jpeg" width="50px" height="50px">
+                                            </div>
+                                            <div class="col type-container">
+                                                <i class="fa fa-circle-o-notch fa-2x"></i>
+                                            </div>
+                                            <div class="col waveform-container">
+                                                <div id="wave9" style="height: 50px; width: 100%;"></div>
+                                            </div>
+                                            <div class="col text-truncate name-container" id="wavename1">
+                                                <span>Samplename Continued Name</span>
+                                                <sub class="text-white-50">Pack Name</sub>
+                                            </div>
+                                            <div class="col instrument-container"><span>Piano</span></div>
+                                            <div class="col bpm-container"><span>120</span></div>
+                                            <div class="col key-container"><span>C</span></div>
+                                            <div class="col actions-container">
+                                                <i class="far fa-heart fa-lg"></i>
+                                                <i class="fa fa-plus fa-lg"></i>
+                                                <i class="fa fa-download fa-lg"></i>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="list-group-item sound-item">
+                                        <div class="row">
+                                            <div class="form-check checked-container">
+                                                <input class="form-check-input" type="checkbox" value="" id="w1">
+                                              </div>
+                                            <div class="col pack-container">
+                                                <img class="img-fluid" src="/assets/img/avatar5.jpeg" width="50px" height="50px">
+                                            </div>
+                                            <div class="col type-container">
+                                                <i class="fa fa-circle-o-notch fa-2x"></i>
+                                            </div>
+                                            <div class="col waveform-container">
+                                                <div id="wave10" style="height: 50px; width: 100%;"></div>
+                                            </div>
+                                            <div class="col text-truncate name-container" id="wavename1">
+                                                <span>Samplename Continued Name</span>
+                                                <sub class="text-white-50">Pack Name</sub>
+                                            </div>
+                                            <div class="col instrument-container"><span>Piano</span></div>
+                                            <div class="col bpm-container"><span>120</span></div>
+                                            <div class="col key-container"><span>C</span></div>
+                                            <div class="col actions-container">
+                                                <i class="far fa-heart fa-lg"></i>
+                                                <i class="fa fa-plus fa-lg"></i>
+                                                <i class="fa fa-download fa-lg"></i>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="list-group-item sound-item">
+                                        <div class="row">
+                                            <div class="form-check checked-container">
+                                                <input class="form-check-input" type="checkbox" value="" id="w1">
+                                              </div>
+                                            <div class="col pack-container">
+                                                <img class="img-fluid" src="/assets/img/avatar5.jpeg" width="50px" height="50px">
+                                            </div>
+                                            <div class="col type-container">
+                                                <i class="fa fa-circle-o-notch fa-2x"></i>
+                                            </div>
+                                            <div class="col waveform-container">
+                                                <div id="wave1" style="height: 50px; width: 100%;"></div>
+                                            </div>
+                                            <div class="col text-truncate name-container" id="wavename1">
+                                                <span>Samplename Continued Name</span>
+                                                <sub class="text-white-50">Pack Name</sub>
+                                            </div>
+                                            <div class="col instrument-container"><span>Piano</span></div>
+                                            <div class="col bpm-container"><span>120</span></div>
+                                            <div class="col key-container"><span>C</span></div>
+                                            <div class="col actions-container">
+                                                <i class="far fa-heart fa-lg"></i>
+                                                <i class="fa fa-plus fa-lg"></i>
+                                                <i class="fa fa-download fa-lg"></i>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="list-group-item sound-item">
+                                        <div class="row">
+                                            <div class="form-check checked-container">
+                                                <input class="form-check-input" type="checkbox" value="" id="w1">
+                                              </div>
+                                            <div class="col pack-container">
+                                                <img class="img-fluid" src="/assets/img/avatar5.jpeg" width="50px" height="50px">
+                                            </div>
+                                            <div class="col type-container">
+                                                <i class="fa fa-circle-o-notch fa-2x"></i>
+                                            </div>
+                                            <div class="col waveform-container">
+                                                <div id="wave11" style="height: 50px; width: 100%;"></div>
+                                            </div>
+                                            <div class="col text-truncate name-container" id="wavename1">
+                                                <span>Samplename Continued Name</span>
+                                                <sub class="text-white-50">Pack Name</sub>
+                                            </div>
+                                            <div class="col instrument-container"><span>Piano</span></div>
+                                            <div class="col bpm-container"><span>120</span></div>
+                                            <div class="col key-container"><span>C</span></div>
+                                            <div class="col actions-container">
+                                                <i class="far fa-heart fa-lg"></i>
+                                                <i class="fa fa-plus fa-lg"></i>
+                                                <i class="fa fa-download fa-lg"></i>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="list-group-item sound-item">
+                                        <div class="row">
+                                            <div class="form-check checked-container">
+                                                <input class="form-check-input" type="checkbox" value="" id="w1">
+                                              </div>
+                                            <div class="col pack-container">
+                                                <img class="img-fluid" src="/assets/img/avatar5.jpeg" width="50px" height="50px">
+                                            </div>
+                                            <div class="col type-container">
+                                                <i class="fa fa-circle-o-notch fa-2x"></i>
+                                            </div>
+                                            <div class="col waveform-container">
+                                                <div id="wave12" style="height: 50px; width: 100%;"></div>
+                                            </div>
+                                            <div class="col text-truncate name-container" id="wavename1">
+                                                <span>Samplename Continued Name</span>
+                                                <sub class="text-white-50">Pack Name</sub>
+                                            </div>
+                                            <div class="col instrument-container"><span>Piano</span></div>
+                                            <div class="col bpm-container"><span>120</span></div>
+                                            <div class="col key-container"><span>C</span></div>
+                                            <div class="col actions-container">
+                                                <i class="far fa-heart fa-lg"></i>
+                                                <i class="fa fa-plus fa-lg"></i>
+                                                <i class="fa fa-download fa-lg"></i>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    
+
+                                </div>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+    <footer class="sticky-footer" style="background: #302d4d;">
+        <div class="container my-auto">
+            <div class="text-center my-auto copyright"><span>Copyright © Brand 2020</span></div>
+        </div>
+    </footer>
+    </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+  </div>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+    <script src="/assets/js/theme.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.3.7/wavesurfer.min.js" integrity="sha512-LCh7sYVlurbUBVeElZMu6FjH1Krvj3rbF4p42WlzPUH7iINbO4sSJpRviLmiJLgVpAt/8Q1W+whmerJre1JURw==" crossorigin="anonymous"></script>    
+    <script src="/assets/js/wavedraw.js"></script>
+</body>
+
+</html>
