@@ -1,15 +1,18 @@
 {
-  "name": "fwa_music",
-  "version": "1.0.0",
-  "description": "Web application designed to allow Fusion Academy students, staff and faculty to haev free access to creative resources. This prjoect is structured around a Node.js, Express, EJS, and MySQL stack, using AWS for a large variety of resources.",
-  "main": "app.js",
+  "name": "node-express-demo",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "author": "Joshua Pare",
-  "license": "ISC",
   "dependencies": {
+    "aws-sdk": "^2.764.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
     "ejs": "^3.1.5",
-    "express": "^4.17.1"
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.1"
   }
 }
